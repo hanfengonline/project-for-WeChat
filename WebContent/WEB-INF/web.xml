@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+    id="WebApp_ID" version="2.5">
+    <servlet>
+        <servlet-name>CoreServlet</servlet-name>
+        <servlet-class>com.zjn.servlet.CoreServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CoreServlet</servlet-name>
+        <url-pattern>/Core</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>initServlet</servlet-name>
+        <servlet-class>
+            com.zjn.servlet.InitServlet
+        </servlet-class>
+        <!--配置获取access_token所需参数appid和appsecret-->
+        <init-param>
+            <param-name>appid</param-name>
+            <param-value>wxea80ed13d0287c01</param-value>
+        </init-param>
+        <init-param>
+            <param-name>appsecret</param-name>
+            <param-value>96f788c1bcba19fd64bf06bd7754500f</param-value>
+        </init-param>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+</web-app>
